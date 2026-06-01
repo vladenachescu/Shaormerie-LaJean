@@ -1,0 +1,31 @@
+{
+  "cale_baza": "/resurse/imagini/erori",
+  "eroare_default": {
+    "titlu": "Eroare Generica",
+    "text": "A aparut o eroare neasteptata pe server.",
+    "imagine": "default.png"
+  },
+  "info_erori": [
+    {
+      "identificator": 404,
+      "status": 404,
+      "titlu": "Pagina Negasita",
+      "text": "Ne pare rau, pagina pe care o cauti nu exista.",
+      "imagine": "404.png"
+    },
+    {
+      "identificator": 403,
+      "status": 403,
+      "titlu": "Acces Interzis",
+      "text": "Nu ai permisiunea de a accesa acest director sau resursa.",
+      "imagine": "403.png"
+    },
+    {
+      "identificator": 400,
+      "status": 400,
+      "titlu": "Cerere Invalida",
+      "text": "Nu poti accesa fisierele EJS direct din browser.",
+      "imagine": "400.png"
+    }
+  ]
+}

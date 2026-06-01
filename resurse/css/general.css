@@ -1,0 +1,370 @@
+body{
+    --culoare-fundal:#FDF6E3;
+    --culoare-1:#E67E22;    
+    --culoare-2:#bb2c05;
+    --culoare-3:#3E2723;
+    --margine-pagina:120px;
+    --culoare-contur:#FDF6E3;
+    background-color: var(--culoare-fundal);
+}
+
+p{
+    border: 1px solid var(--culoare-fundal);
+}
+
+
+main{
+    margin-left: var(--margine-pagina);
+    margin-right: var(--margine-pagina);
+
+
+}
+
+html {
+    font-size: 16px;
+    transition: font-size 0.5s ease;
+}
+
+#grid-pagina {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "z1 z1 z1 z1"
+        "z5 z6 z6 z7"
+        "z3 z3 z2 z2"
+        "z4 z4 z2 z2"
+        "z8 z8 z8 z8";
+}
+
+
+.table-container {
+    width: 100%;
+}
+#tab-orar {
+    caption-side: bottom;
+    border-collapse: separate;
+    border-spacing: 2px;
+    width: 100%;
+    text-align: center;
+}
+#tab-orar th, #tab-orar td {
+    border: 1px solid var(--culoare-contur);
+    padding: 8px;
+}
+#tab-orar tbody tr:nth-child(even) {
+    background-color: var(--culoare-3);
+}
+#tab-orar tbody tr:nth-child(odd) {
+    background-color: var(--culoare-contur);
+}
+#tab-orar tbody tr {
+    transition: background-color 0.5s ease;
+}
+#tab-orar tbody tr:hover {
+    background-color: var(--culoare-3) !important;
+}
+
+/* Stilizare taburi iframe */
+.container-iframe {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 100%;
+    width: 560px; /* Sincronizat cu lățimea iframe-ului */
+    margin: 0 auto;
+}
+.container-iframe iframe {
+    order: 1;
+    border: 4px solid var(--culoare-contur);
+    box-sizing: border-box;
+    max-width: 100%;
+}
+.taburi-iframe {
+    order: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.taburi-iframe a {
+    flex: 1;
+    padding: 10px 5px;
+    font-size: 0.9em;
+    background-color: var(--culoare-1);
+    color: var(--culoare-3);
+    text-decoration: none;
+    border: 4px solid var(--culoare-contur);
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    text-shadow: 0 0 4px white, 0 0 6px white;
+    box-sizing: border-box;
+    /* Un glow subtil la bază în mod normal */
+    box-shadow: inset 0px -3px 5px rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.4s ease-out, background-color 0.4s;
+}
+
+.taburi-iframe a:hover {
+    background-color: var(--culoare-1);
+    color: var(--culoare-3);
+    /* Glow-ul se extinde masiv de jos în sus la hover */
+    box-shadow: inset 0px -40px 40px rgba(255, 255, 255, 0.9);
+}
+
+
+#link-top {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--culoare-fundal ); 
+    border: 4px solid var(--culoare-3   );
+    transform: rotate(45deg);
+    text-decoration: none;
+    font-size: 0; 
+    position: fixed; 
+    right: 30px;
+    bottom: 30px;
+    opacity: 0.5; 
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+#triunghi {
+    width: 0;
+    height: 0;
+    border-top: none;
+    border-left: 16px solid transparent; /* Bordere stânga/dreapta transparente */
+    border-right: 16px solid transparent;
+    border-bottom: 30px solid var(--culoare-1); /* Border jos colorat */
+    border-radius: 50%; /* Efect de latură rotunjită conform cerinței */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Centrat orizontal și vertical */
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: border-bottom-color 0.5s ease;
+}
+
+#link-top:hover {
+    background-color: var(--culoare-1); /* Se schimbă culoarea background-ului */
+    border-color: var(--culoare-3);
+    opacity: 1; /* Devine opac la hover */
+}
+
+#link-top:hover #triunghi {
+    border-bottom-color: var(--culoare-fundal); /* Se schimbă culoarea triunghiului */
+}
+
+#grid-pagina > *{
+    border: 1px solid var(--culoare-contur);
+    padding:10px;
+    box-shadow: 0px 0px 10px var(--culoare-3);
+
+
+}
+
+figure{/*resetare spatiere*/
+    margin:0;
+    }
+figure>img{
+    width:100%;
+
+}
+
+.rubik-puddles-regular {
+  font-family: "Rubik Puddles", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+#welcome { grid-area: z1; }
+#orar { grid-area: z2; }
+#calendar-evenimente { grid-area: z3; }
+#anunturi { grid-area: z4; }
+#utilizatori-onlinje { grid-area: z5; }
+#date-utilizator { grid-area: z6; }
+#date-site { grid-area: z7; }
+#diverse { grid-area: z8; }
+
+.placeholder-zone {
+    border: 2px dashed var(--culoare-contur);
+    background-color: var(--culoare-3);
+    padding: 1rem;
+    text-align: center;
+}
+
+ 
+
+
+@media screen and (max-width:1200px) {
+    html {
+        font-size: 15px;
+    }
+    body {
+        --margine-pagina:80px;
+    }
+    #grid-pagina {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: auto;
+    }
+}
+
+@media screen and (max-width:700px) {
+    html {
+        font-size: 14px;
+    }
+    * {
+        animation: none important;
+    }
+    
+    #tab-orar {
+        border-spacing: 0;
+    }
+    .table-container {
+        overflow-x: auto;
+    }
+
+    #grid-pagina {
+        display: block;
+    }
+
+    body {
+        --margine-pagina:50px;
+    }
+}
+
+@media screen {
+    #watermark { display: none !important; }
+}
+
+@media print {
+    @page :left {
+        margin-left: 2cm;
+        margin-right: 1cm;
+    }
+    @page :right {
+        margin-left: 1cm;
+        margin-right: 2cm;
+    }
+
+    #watermark {
+        position: fixed;
+        top: 45%;
+        left: 20%;
+        width: 60%;
+        height: 10%;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: rgba(0,0,0,0.3) !important;
+        font-size: 3rem;
+        z-index: 9999;
+        pointer-events: none;
+    }
+
+    #banner-proiect {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        border: 3px double black;
+        margin: 0;
+        padding: 5px;
+        text-align: center;
+        background: white;
+    }
+
+    img, video, iframe, figure, figcaption, #link-top, .container-iframe {
+        display: none !important;
+    }
+
+    #grid-pagina {
+        display: block !important;
+    }
+
+    a {
+        color: black !important;
+        text-decoration: none !important;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    ul.meniu, ul.meniu ul {
+        display: block !important;
+        position: relative !important;
+        transform: none !important;
+        margin: 0 !important;
+        padding-left: 20px !important;
+    }
+
+    ul.meniu li, ul.meniu ul li {
+        display: block !important;
+        width: 100% !important;
+        border: none !important;
+        background: none !important;
+        color: black !important;
+        text-align: left !important;
+        margin: 5px 0 !important;
+    }
+
+    nav {
+        display: block !important;
+        page-break-after: always;
+        break-after: page;
+    }
+
+    footer {
+        page-break-before: always;
+        break-before: page;
+    }
+}
+/* BONUS Task Video */
+video.video-prezentare{width:80%;min-width:300px;max-width:800px;display:block;margin:0 auto;}
+::cue{background-color:var(--culoare-3);color:white;text-align:left;}
+::cue(b){font-weight:bold;}
+
+/* BONUS Task Linkuri */
+/* Visited links */
+a:visited {
+    color: var(--culoare-1);
+}
+
+/* External links */
+a[href^="http"]::before {
+    content: "⮳ ";
+    font-size: 1.5em;
+    margin-right: 5px;
+    transition: color 0.3s ease;
+}
+a[href^="http"]:hover::before {
+    color: var(--culoare-1);
+}
+
+/* Links in main and footer */
+main a, footer a {
+    text-decoration: underline;
+    background-image: radial-gradient(circle, var(--culoare-1) 0%, var(--culoare-1) 40%, transparent 80%, transparent 100%);
+    background-position: center;
+    background-size: 0% 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease;
+    padding: 2px 5px;
+}
+main a:hover, footer a:hover {
+    background-size: 100% 100%;
+}
+main a:active, footer a:active {
+    border: 2px solid var(--culoare-1);
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <%- include('../fragmente/head') %>
+    <title><%= locals.titlu || "Eroare" %></title>
+</head>
+<body>
+    <%- include('../fragmente/header') %>
+    <main style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 50vh; text-align: center; padding: 2rem;">
+        <h1 style="color: red;"><%= locals.titlu %></h1>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;"><%= locals.text %></p>
+        <% if (locals.imagine) { %>
+            <img src="<%= locals.imagine %>" alt="Imagine eroare" style="max-width: 300px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        <% } %>
+        <br><br>
+        <a href="/" style="padding: 10px 20px; background-color: var(--culoare-1); color: white; text-decoration: none; border-radius: 5px;">&larr; Înapoi la pagina principală</a>
+    </main>
+    <%- include('../fragmente/footer') %>
+</body>
+</html>

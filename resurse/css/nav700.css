@@ -1,0 +1,31 @@
+#hamburger{
+    display:block;
+}
+
+#hamburger> img{
+    height: 1em;
+    width:auto;
+}
+
+ul.meaniu
+{
+    display:none;
+}
+
+#ch-meniu:checked + ul.meaniu
+{
+    display:block;
+    position:absolute;
+    z-index: 10;
+    width :100%;
+}
+
+ul.meaniu li
+{
+    width :100%;
+}
+
+ul.meaniu ul
+{
+    width :100%;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "tehnici-web",
+  "version": "1.0.0",
+  "description": "shaorma online",
+  "keywords": [
+    "shaorma",
+    "kebab"
+  ],
+  "license": "ISC",
+  "author": "Enachesc Vlad-Ion",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^5.0.1",
+    "express": "^5.2.1"
+  }
+}

@@ -1,0 +1,103 @@
+Raport Cerințe Etapa 1 - index.html (acum etapa 1.html)
+Acest document conține harta exactă a numărului de linii la care a fost respectată fiecare cerință propusă pentru Etapa 1.
+
+(0.025) Creați un folder, index.html, doctype și setați limba: 
+- Liniile 1 (<!DOCTYPE html>) și 3 (<html lang="ro">)
+
+(0.05) Adaugați un title și cele 4 meta tag-uri (charset, autor, cuvinte cheie, descriere):
+- Liniile 9 - 19 (<title> e la linia 11, urmate de tagurile meta)
+
+(0.025) Cuvintele cheie trebuie să apară în text:
+- Liniile 205, 211, 215, 288, 370 (Cuvinte precum shaorma, kebab, oferte apar natural de foarte multe ori pe tot parcursul documentului).
+
+(0.025) Creați folder resurse/ico, adăugați favicon compatibil și setare de tile color:
+- Liniile 21 - 33 (Linkurile pentru .ico, .svg, png și msapplication-TileColor).
+
+(0.025) Împărțiți body-ul în header, main, footer:
+- Linia 149 (<header>), Linia 193 (<main>), Linia 851 (<footer>)
+
+(0.05) Minim un tag de secționare (section, article, aside) cu imbricări și nivel de heading adecvat (h2/h3):
+- Secțiune părinte cu <h2>: Linia 380 (<section id="produse">)
+- Secțiune imbricată (fiu) cu <h3>: Liniile 386 și 412.
+
+(0.025) Minim un heading din pagină acompaniat de subtitlu cu <hgroup>:
+- Liniile 201 - 204 (Subtitlul "Cea mai bună shaorma din oraș")
+
+(0.05) În header, navigare cu ul, sub-opțiuni listă imbricată și h1:
+- Liniile 149 - 191 (Aici se regăsește tot <header>-ul, începe cu <h1> apoi <nav> care cuprinde sub-meniuri în <ul>).
+
+(0.025) În cadrul secțiunilor minim 2 tag-uri de grupare (p, blockquote, dl):
+- Secțiunea #welcome conține: <p> (linia 211), <dl> cu termeni (linia 219), <blockquote> (linia 231).
+
+(0.05) Secțiune cu evenimente, tag <time> cu dată și oră, listate în ul/ol, cu denumirea în <b>:
+- Liniile 676 - 703 (Secțiunea Evenimente și Anunțuri creată sub forma de <ul> cu tag-ul time complet).
+
+(0.05) Imagine cu descriere în figure/figcaption + tagul picture (pt ecran mic/mare) + atribut title:
+- Liniile 237 - 250 (Grupul perfect în interiorul unei <figure> ce include <picture>, <source>, și <img>).
+
+(0.075) Îndepliniți 3 cerințe de formatare în text: (ai îndeplinit mai multe!)
+- <b> (linia 211)
+- <strong> (linia 292, 687)
+- <i> (linia 310, 316)
+- <s> și <ins> (linia 294)
+- <abbr> (linia 296)
+- <dfn> (linia 322)
+
+(0.1) Creați următoarele linkuri (5 la număr):
+- Link extern în tab nou: linia 368
+- Link extern la un "id" (anchor) cu wbr: linia 370
+- Download cu nume setat: linia 372
+- Link pe imagine cu deschidere vers. mare: linia 374
+- Link footer mergi la inceputul paginii: linia 853
+
+(0.05) Iframe cu youtube și div chiar deasupra cu 3 link-uri targetate pe iframe:
+- Liniile 821 - 839
+
+(0.1) Tabel (thead, tbody, tfoot), td, rowspan/colspan + caption descriere:
+- Tabelul pleacă de la linia 488. Descrierea (caption) e la 490, capul (thead) la 492, corpul (tbody) la 514, piciorul (tfoot) la 628. Colspan este la linia 632, iar Rowspan la 520.
+
+(0.025) Zone de details și summary:
+- Liniile 705 - 733 (Grupul de Întrebări Frecvente organizat sub formă de drop-down).
+
+(0.05) Folosiți tagul meter (cu atribute value, min, max, low, high, optimum):
+- Liniile 472 și 478. Un meter arată o valoare mult peste High (85%), iar altul sub limită Low (5 min).
+
+(0.1) În footer adăugați tag-ul address cu contact, maps separat de br, mail, nr. telefon, whatsapp:
+- Liniile 855 - 871 (Sunt prezente numărul de telefon ancorat cu 'tel:', maps pe Universitate, mail cu 'mailto:' și link de whatsapp cu schema 'wa.me/').
+
+(0.05) În footer copyright (small, cod simbol &copy;, tag time doar cu data creatiei, numele):
+- Linia 873
+
+(0.15) Validare W3C Syntactic - De arătat în clasă validatorul.
+
+
+-----------------------------------------------------------
+Raport Cerințe Etapa 2 - CSS (general.css)
+Acest document conține harta implementărilor pentru cerințele de CSS rezolvate.
+
+1. Layout Responsive (CSS Grid):
+- Liniile 28-38 (Definire Desktop 3 coloane cu grid-template-areas).
+- Liniile 214-224 (Definire Tabletă 2 coloane sub max-width: 1200px).
+- Liniile 242-244 (Definire Mobil 1 coloană (block) sub max-width: 700px).
+- Scalarea fontului (html font-size) prezentă pe liniile 24, 209, 229.
+- Anularea animațiilor pe ecran mic (animation: none !important) la linia 232.
+
+2. Stilizare Tab-uri Iframe (#retete):
+- Liniile 68-119 (Stilizarea completă a secțiunii de iframe).
+- Liniile 83-90 (Container taburi cu flex, order: 2 pentru a fi sub iframe, justify-content: space-between).
+- Liniile 91-112 (Stilizarea "butonului" ca tab atârnat: border-top: none, border-radius: 0 0 15px 15px, umbră, flex: 1, text-shadow).
+- Liniile 114-119 (Efectul animat la hover, treptat cu box-shadow de jos în sus).
+
+3. Stilizare Tabel (#tab-orar):
+- Liniile 40-66 (Structura generală de tabel).
+- Linia 47: border-spacing (spațiul "s" dintre celule).
+- Linia 45: caption-side: bottom.
+- Liniile 55-60: Background alternant pe rândurile de date (nth-child even și odd).
+- Liniile 61-66: Tranzitie background-color pe tr la hover (exceptând thead).
+- Liniile 235-240: Dispariția spațiului "s" (border-spacing: 0) pe ecran mic (max-width: 700px) și overflow-x: auto pe containerul tabelului.
+
+4. Butonul „Înapoi Sus” (#link-top):
+- Liniile 121-163 (Implementarea completă a butonului în formă de romb).
+- Liniile 122-137 (Buton cu formă de romb: rotate(45deg), semi-transparent opacity: 0.5, poziție fixă, tranziție 0.5s).
+- Liniile 139-153 (Triunghi creat din CSS cu border-top: none, borduri laterale transparente și border de jos colorat + border-radius: 50% pentru bază curbată. Centrat cu transform).
+- Liniile 155-163 (La hover opacitatea devine 1 și culorile fundalului/triunghiului se inversează conform temei).

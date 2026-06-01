@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <%- include('../fragmente/head') %>
+</head>
+<body>
+    <%- include('../fragmente/header') %>
+    <section id="prezentare-video" style="padding: 2rem; background: var(--culoare-fundal); text-align: center;">
+        <h2>Prezentare Video (Bonus)</h2>
+        <video poster="/resurse/imagini/sigla1.png" controls preload="auto" class="video-prezentare">
+            <source src="/resurse/video/video1.mp4" type="video/mp4">
+            <source src="/resurse/video/video1.webm" type="video/webm">
+            <track default kind="captions" srclang="ro" src="/resurse/video/subtitrare_ro.vtt" label="Română">
+            <track kind="captions" srclang="en" src="/resurse/video/subtitrare_en.vtt" label="English">
+            Browserul dumneavoastră nu suportă elementul video.
+        </video>
+    </section>
+    <main> <!--  comentariu -->
+
+        <div id="grid-pagina">
+
+
+
+            <section id="welcome">
+
+                <hgroup>
+
+                    <h2>Bine ați venit</h2>
+
+                    <p class="subtitlu">Cea mai bună shaorma din oraș</p>
+
+                </hgroup>
+
+
+
+                <p class="intro">Vă mulțumim că vizitați <b>Shaorma La Jean</b>. Pregătiți-vă pentru o explozie de gusturi orientale!</p>
+
+               
+
+                <div class="intro-oferte"><div>Shaorma Pui</div><div>Shaorma Vită</div><div>Kebab</div><div>Falafel</div><div>Ayran</div></div>
+
+                <p class="anunt intro">Vă puteți bucura de preparatele noastre atât la locație, cât și acasă prin serviciul de livrare.</p>
+
+                <dl>
+
+                    <dt>Shaorma</dt>
+
+                    <dd>Preparat oriental delicios din carne rotisată.</dd>
+
+                    <dt>Falafel</dt>
+
+                    <dd>Chiftele din năut prăjite, perfecte pentru vegetarieni.</dd>
+
+                </dl>
+
+                <blockquote>"La Jean am mâncat cea mai bună shaorma din viața mea!" - Client fericit</blockquote>
+
+                <div id="dv-prezentare-1">
+
+                    <div id="dv-prezentare">
+
+                    <figure>
+                        <picture>
+
+                            <!-- il ia pe primul care se potriveste cu query-ul din media-->
+
+                            <source srcset="./resurse/imagini/shaorma-200x200.jpg" media="(max-width:700px)"/>
+
+                            <source srcset="./resurse/imagini/shaorma.jpg" media="(max-width:1200px)"/>
+
+                            <img src="/resurse/imagini/shaorma-640x360.jpg" alt="O shaorma la farfurie" title="Shaorma la farfurie"/>
+
+                        </picture>
+                        <figcaption>Shaorma La Jean - Prezentare preparat</figcaption>
+                    </figure>
+
+                </div>
+
+            </div>
+
+            <hr class="prajituri"/>
+
+            <div id="container-video">
+
+                <img style="width:50%" class="farfurie" src="resurse/imagini/farfurie_shaorma.png" alt="O shaorma delicioasa la farfurie" title="Shaorma la farfurie">
+
+                <div id="centrare-video">
+
+                    <div id="clip-video">
+
+                        <div id="stil-video">
+
+                            <video width="320" height="240"  playsinline autoplay loop muted>
+
+                                <source src="resurse/video/shaorma.mp4" type="video/mp4">
+
+                                <track default src="data:image/png;base64, V0VCVlRUIC0gU2hhb3JtYQoKMDA6MDAuMDAwIC0tPiAwMDowMy4wMDAgbGluZTowClNoYW9ybWEhCgo=" kind="captions" srclang="ro" label="romana">
+
+                            </video>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            </section>
+            <section id="calendar-evenimente" class="placeholder-zone">
+                <h2>Calendar de evenimente</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placeholder pentru Zona 3.</p>
+            </section>
+            
+            <section id="utilizatori-online" class="placeholder-zone">
+                <h2>Utilizatori online</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placeholder pentru Zona 5.</p>
+            </section>
+            
+            <section id="date-utilizator" class="placeholder-zone">
+                <h2>Date utilizator și statistici</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placeholder pentru Zona 6.</p>
+            </section>
+
+            <section id="date-site" class="placeholder-zone">
+                <h2>Date site și server</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placeholder pentru Zona 7.</p>
+            </section>
+
+<section id="orar">
+
+                <h2>Orar</h2>
+
+                <div class="table-container">
+<table id="tab-orar">
+
+                    <caption>Orarul de funcționare și livrări</caption>
+
+                    <thead>
+
+
+
+                        <tr>
+
+                            <th>Cod</th>
+
+                            <th>Perioadă</th>
+
+                            <th>Zi</th>
+
+                            <th>Interval dimineata</th>
+
+                            <th>Pauza de masa</th>
+
+                            <th>Interval seară</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td></td>
+
+                            <td rowspan="5">Zile<br/>Lucrătoare</td>
+
+                            <td>Luni</td>
+
+                            <td>10-12</td>
+
+                            <td>12-14</td>
+
+                            <td>14-20</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td></td>
+
+                           
+
+                            <td>Marti</td>
+
+                            <td>9-12</td>
+
+                            <td>12-14</td>
+
+                            <td>14-21</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td></td>
+
+                           
+
+                            <td>Miercuri</td>
+
+                            <td>9-11</td>
+
+                            <td>11-13</td>
+
+                            <td>14-21</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td></td>
+
+                           
+
+                            <td>Joi</td>
+
+                            <td>9-11</td>
+
+                            <td>11-13</td>
+
+                            <td>14-21</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td></td>
+
+                           
+
+                            <td>Vineri</td>
+
+                            <td>9-12</td>
+
+                            <td>12-14</td>
+
+                            <td>14-19</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td></td>
+
+                            <td rowspan="2">Weekend</td>
+
+                            <td>Sambata</td>
+
+                            <td>10-12</td>
+
+                            <td>12-13</td>
+
+                            <td>13-16</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td></td>
+
+                            <td>Duminica</td>
+
+                            <td>10-14</td>
+
+                            <td>-</td>
+
+                            <td>inchis</td>
+
+                        </tr>
+
+                    </tbody>
+
+                    <tfoot>
+
+                        <tr>
+
+                            <td colspan="6">Închis cu ocazia sărbătorilor legale și a zilelor de odihnă națională.</td>
+
+                        </tr>
+
+                    </tfoot>
+
+                </table>
+</div>
+
+                <p><strong>Atenție!</strong> În prima zi a lunii, programul poate suferi modificări datorită inventarului.</p>
+
+            </section>
+<section id="anunturi">
+
+                <h2 class="fg-img">Evenimente și Anunțuri</h2>
+
+                <ul>
+                    <li>
+                        <time datetime="2025-07-20T10:00">20 iulie 2025, ora 10:00</time> - 
+                        <b>Reînnoirea Meniului</b>: Am reînnoit meniul și am adus ingrediente proaspete direct de la producători locali.
+                    </li>
+                    <li>
+                        <time datetime="2022-01-05T08:00">5 ianuarie 2022, ora 08:00</time> - 
+                        <b><strong>Servicii Premium</strong></b>: Oferim servicii premium de livrare la domiciliu, respectând cele mai înalte norme de igienă.
+                    </li>
+                    <li>
+                        <time datetime="2020-03-15T12:00">15 martie 2020, ora 12:00</time> - 
+                        <b>Nouă Rețetă</b>: <span>Am adăugat o nouă rețetă de Kebab în meniu</span>
+                    </li>
+                    <li>
+                        <time datetime="2020-12-20T18:00">20 decembrie 2020, ora 18:00</time> - 
+                        <b>Surprize de Iarnă</b>: Vă pregătim noi oferte surpriză! Urmăriți pagina pentru noutăți.
+                    </li>
+                    <li>
+                        <time datetime="2021-02-11T14:30">11 februarie 2021, ora 14:30</time> - 
+                        <b>Sănătate Orientală</b>: Studiile au arătat că shaormale sunt cele mai sănătoase alimente. Vă așteptăm zilnic pentru porția dumneavoastră de sănătate orientală.
+                    </li>
+                </ul>
+
+            </section>
+<div id="diverse">
+
+
+            <section id="promotii">
+
+                <h2>Promoții și oferte</h2>
+
+                <article>
+
+                    <h3 class="titlu"><strong>Super ofertă de weekend</strong></h3>
+
+                    <p><b>Shaorma La Jean</b> oferă <b>reduceri de <s>10%</s> <ins>15%</ins></b> pentru toate produsele cumpărate în intervalul 10-14.</p>
+
+                    <p>Oferta este valabilă doar în zilele de sâmbătă și duminică la sediile <abbr title="Shaorma La Jean">CD</abbr>.</p>
+
+                    <p>În cazul în care cumpărați mai mult de zece <b>meniuri shaorma</b>, primiți un card de fidelitate cu 20% reducere!</p>
+
+                </article>
+
+                <article>
+
+                    <h3>Ofertă pachet</h3>
+
+                    <p>Shaorma La Jean oferă pachete cuprinzând:</p>
+
+                    <ol>
+
+                        <li><i lang="en">icecream</i></li>
+
+                        <li>O portie mare de cartofi prăjiți</li>
+
+                        <li>O prajitură la alegere</li>
+
+                        <li>Un <i>suc</i></li>
+
+                        <li>Gratis: o farfurioară ornata cu inițiala șaormeriei</li>
+
+                        <li>Gratis: o felicitare cu imaginea șaormeriei</li>
+
+                        <li>Gratis: un <dfn title="Băutură tradițională turcească pe bază de iaurt, apă și sare">Ayran</dfn> rece (băutura perfectă pentru a completa o masă orientală autentică).  </li>
+
+                    </ol>
+
+                   
+
+                </article>
+
+                <article>
+
+                    <h3>Shaorma de Shaorma</h3>
+
+                    <p>Shaorma noastră este preparată doar cu carne proaspătă și sosuri fine!</p>
+
+                    <p>Avem meniuri gigant pentru a satisface chiar și cele mai mari pofte, de toate dimensiunile.</p>
+
+                    <ol>
+
+                        <li>Pentru toți clienții pofticioși, completăm comenzile cu porții extra la cerere.</li>
+
+                        <li>Meniurile noastre includ cartofi prăjiți, salată proaspătă și un mix delicios de sosuri, preparate zilnic în bucătăria noastră.</li>
+
+                        <li>Sosurile preparate de noi în casă se combină perfect cu cartofii rumeniți.</li>
+
+
+
+                    </ol>
+
+                   
+
+                </article>
+
+                <article>
+
+                    <h3>Platouri de grup</h3>
+
+                    <p>Pentru ocaziile speciale în familie sau ieșirile cu prietenii, vă punem la dispoziție platouri generoase care conțin de la shaorma și kebab până la falafel, permițându-vă să savurați gustul autentic oriental.</p>
+
+                   
+
+                </article>
+
+                <h3>Linkuri Utile</h3>
+
+                <ul>
+
+                    <li><a href="https://ro.wikipedia.org/wiki/Shaorma" target="_blank">Află mai multe despre istoria Shaormei (Wikipedia)</a></li>
+
+                    <li><a href="https://en.wikipedia.org/wiki/Kebab#History">Istoria Kebab-ului <wbr>(Wikipedia Anchor)</a></li>
+
+                    <li><a href="resurse/imagini/shaorma.jpg" download="meniu_shaormerie.png">Descarcă meniul nostru complet în format imagine</a></li>
+
+                    <li><a href="resurse/imagini/shaorma-640x360.jpg" target="_self"><img src="resurse/imagini/shaorma-200x200.jpg" alt="Vizualizeaza poza la dimensiune mare" width="100"> Click pe imagine pentru varianta marită</a></li>
+
+                </ul>
+
+            </section>
+
+            <section id="produse">
+
+                <h2>Produsele noastre</h2>
+
+                <p>Veniți să degustați cele mai vibrante și delicioase preparate!</p>
+
+                <section>
+
+                    <h3>Specialități la farfurie</h3>
+
+                    <p>Perfecte de împărțit cu prietenii sau de savurat singur, aceste preparate sunt o alegere excelentă pentru orice masă pe cinste.</p>
+
+                    <p>Avem oferte cu:</p>
+
+                    <ul>
+
+                        <li>Shaorma de pui la farfurie</li>
+
+                        <li>Shaorma de vită la farfurie</li>
+
+                        <li>Shaorma mixtă</li>
+
+                        <li>Kebab la farfurie</li>
+
+                        <li>Falafel la farfurie</li>
+
+                        <li>Iskender Kebab</li>
+
+                    </ul>
+
+                </section>
+
+                <section>
+
+                    <h3>Prăjituri</h3>
+
+                    <p>Vă oferim atât shaorma clasică, cât și preparate după rețete orientale unice.</p>
+
+                    <p>Variante fast-food:</p>
+
+                    <ul>
+
+                        <li>Shaorma Mică Pui/Vită</li>
+
+                        <li>Shaorma Mare Pui/Vită</li>
+
+                        <li>Shaorma Lipie Libaneză</li>
+
+                        <li>Shaorma Picantă</li>
+
+                        <li>Kebab în lipie</li>
+
+                        <li>Doner Kebab</li>
+
+                        <li>Meniu Aripioare Picante</li>
+
+                        <li>Meniu Crispy Strips</li>
+
+                    </ul>
+
+                </section>
+
+               
+
+                <section>
+
+                    <h3>Sosuri</h3>
+
+                    <p> Sosurile și opțiunile noastre extra includ:</p>
+
+                    <ul>
+
+                        <li>Ketchup dulciu/picant</li>
+
+                        <li>Sos usturoi</li>
+
+                        <li>Sos picant</li>
+
+                        <li>Sos dulce</li>
+
+                    </ul>
+
+                </section>
+
+            </section>
+
+            <section id="statistici-produse">
+
+                <h2>Informații Nutriționale și Popularitate</h2>
+
+                <p>Nivel de picanterie (Kebab Picant):
+
+                    <meter value="85" min="0" max="100" low="40" high="80" optimum="50">85%</meter> (Foarte iute!)
+
+                </p>
+
+                <p>Timp mediu de așteptare la coadă (minute):
+
+                    <meter value="5" min="0" max="60" low="10" high="30" optimum="5">5 minute</meter> (Aproape instant!)
+
+                </p>
+
+            </section>
+
+            
+
+            <figure id="fig1" class="fg-img">
+
+                <img src="resurse/imagini/shaorma_wrap.png" alt="Shaorma la lipie">
+
+                <figcaption>Shaorma Pui</figcaption>
+
+            </figure>
+
+            <figure id="fig2" class="fg-img">
+
+            <img src="resurse/imagini/farfurie_shaorma.png" alt="Shaorma la farfurie">
+
+            <figcaption>Shaorma Farfurie</figcaption>
+
+            </figure>
+
+            <figure  id="fig3" class="fg-img">
+
+            <img src="resurse/imagini/falafel.jpg" alt="Falafel delicios">
+
+            <figcaption>Falafel</figcaption>
+
+            </figure>
+
+            <figure  id="fig4">
+
+            <img src="resurse/imagini/doner_kebab.png" alt="Doner Kebab">
+
+            <figcaption>Doner Kebab</figcaption>
+
+            </figure>
+
+            
+
+            <section id="index-intrebari">
+
+                <h2>Întrebări frecvente</h2>
+
+                <details><summary>Folosiți ingrediente proaspete zilnic?</summary>
+
+                    <p>Desigur! Aducem legume proaspete în fiecare dimineață.</p>
+
+                </details>
+
+                <details><summary>Se poate plăti cu cardul la livrare?</summary>
+
+                    <p>Desigur! Aducem legume proaspete în fiecare dimineață.</p>
+
+                </details>
+
+                <details><summary>Aveți opțiuni vegetariene sau de post?</summary>
+
+                    <p>Foarte! Desigur! Aducem legume proaspete în fiecare dimineață.</p>
+
+                </details>
+
+                <details><summary>Organizați și catering pentru evenimente corporate?</summary>
+
+                    <p>Da, vă rugăm să ne contactați telefonic pentru o ofertă personalizată.</p>
+
+                </details>
+
+            </section>
+
+
+
+        </div>
+</div>
+
+        <section id="galerie-statica">
+
+            <h2>Galerie</h2>
+
+            <div id="grid-galerie">
+
+                <figure>
+
+                    <div>
+
+                        <img src="resurse/imagini/shaorma_wrap.png" alt="Shaorma la lipie"></div>
+
+               
+
+                <figcaption>Shaorma Lipie</figcaption>
+
+                </figure>
+
+                <figure>
+
+                <img src="resurse/imagini/farfurie_shaorma.png" alt="Shaorma la farfurie">
+
+                <figcaption>Shaorma Mare</figcaption>
+
+                </figure>
+
+                <figure>
+
+                <img src="resurse/imagini/falafel.jpg" alt="Falafel">
+
+                <figcaption>Falafel</figcaption>
+
+                </figure>
+
+                <figure>
+
+                <img src="resurse/imagini/doner_kebab.png" alt="Doner Kebab">
+
+                <figcaption>Doner Kebab</figcaption>
+
+                </figure>
+
+                <figure>
+
+                <img src="resurse/imagini/shaorma.jpg" alt="Meniu shaorma pui">
+
+                <figcaption>Meniu asortat</figcaption>
+
+                </figure>
+
+                <figure>
+
+                <img src="resurse/imagini/shaorma_wrap.png" alt="Shaorma vita">
+
+                <figcaption>Shaorma Vită</figcaption>
+
+                </figure>
+
+                <figure>
+
+                <img src="resurse/imagini/farfurie_shaorma.png" alt="Oferta">
+
+                <figcaption>Ofertă Grup</figcaption>
+
+                </figure>
+
+           
+
+            </div>
+
+        </section>
+
+        <section id="retete">
+
+            <h2>Retete</h2>
+
+            <p>Dacă doriți să vă faceți singuri deliciile orientale acasă (deși durează ceva timp și necesită experiență),
+
+                Puteți încerca să le reproduceți acasă, pentru a vedea adevărata artă din spatele lor,
+
+                sau, desigur, puteți pur și simplu comanda de la noi pentru un gust desăvârșit!</p>
+
+            <div class="container-iframe">
+
+                <div class="taburi-iframe">
+
+                <a href="https://www.youtube.com/embed/ydJwJoOCGb8?si=TW2WSNrbMslTvajR" target="ifr-video">Rețetă autentică de Shaorma</a>
+
+                <a href="https://www.youtube.com/embed/XIwHS6KWW4k?si=YL8Jz16eYtnMqnQA" target="ifr-video" >Cum să faci Kebab</a>
+
+                <a href="https://www.youtube.com/embed/HBagDRArt3I?si=ggG49LXDpa5TyKWt" target="ifr-video" >Rețetă Falafel oriental</a>
+
+                </div>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ydJwJoOCGb8?si=TW2WSNrbMslTvajR" name="ifr-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+           
+
+
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+    </main>
+    <%- include('../fragmente/footer') %>
+</body>
+</html>

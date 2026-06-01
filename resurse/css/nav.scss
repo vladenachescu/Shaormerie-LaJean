@@ -1,0 +1,260 @@
+// resurse/css/nav.scss
+
+// Extindere pentru styling-ul de bază al opțiunilor de meniu
+%buton-meniu {
+    display: inline-block;
+    width: var(--latime-buton);
+    height: var(--inaltime-buton);
+    background-color: var(--culoare-3);
+    border: 1px solid var(--culoare-contur);
+    color: var(--culoare-fundal);
+    text-align: center;
+    line-height: var(--inaltime-buton);
+    font-weight: bold;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 1s linear;
+}
+
+nav {
+    --latime-buton: 120px;
+    --inaltime-buton: 30px;
+    background-color: var(--culoare-3);
+}
+
+ul.meniu, ul.meniu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#hamburger, #ch-menu {
+    display: none;
+}
+
+.text-icon, .imag-icon {
+    display: inline-block;
+}
+
+ul.meniu {
+    display: flex;
+    position: relative;
+    
+    // Meniu principal
+    > li {
+        @extend %buton-meniu;
+        position: relative;
+        
+        a {
+            display: inline-block;
+            color: inherit;
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s linear;
+        }
+
+        // a. Când venim cu cursorul pe o opțiune din meniu, se va realiza tranziția:
+        // dimensiunea textului va crește treptat.
+        &:hover {
+            color: var(--culoare-fundal);
+            font-size: 1.15em; // crește treptat dimensiunea
+            
+            > ul {
+                // b. Deschiderea submeniului se va scala de la 0 la înălțimea totală pe verticală
+                transform: scaleY(1);
+            }
+        }
+        
+        // Submeniu
+        ul {
+            position: absolute;
+            top: 100%; // Sub butonul de meniu, fara gap
+            left: 0;
+            z-index: 17;
+            width: 100%;
+            
+            // Submeniul invizibil initial si animat
+            transform-origin: top;
+            transform: scaleY(0);
+            transition: transform 0.5s ease-in-out;
+            
+            li {
+                @extend %buton-meniu;
+                position: relative;
+                width: 100%;
+                font-size: 1em; // reset font size
+                
+                // c. Când venim cu cursorul pe o opțiune din submeniu vor apărea stânga/dreapta două bare
+                &::before, &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    width: 8px;
+                    transform-origin: center;
+                    transform: scaleY(0);
+                    opacity: 0;
+                    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                    height: 100%;
+                }
+                
+                &::before {
+                    left: 0;
+                    background: linear-gradient(to left, transparent, var(--culoare-fundal));
+                }
+                
+                &::after {
+                    right: 0;
+                    background: linear-gradient(to right, transparent, var(--culoare-fundal));
+                }
+                
+                &:hover {
+                    color: var(--culoare-fundal);
+
+                    &::before, &::after {
+                        transform: scaleY(1);
+                        opacity: 1;
+                    }
+                }
+            }
+            
+            // Folosire @for pentru tranzitii repetitive - delay
+            @for $i from 1 through 10 {
+                li:nth-child(#{$i}) {
+                    &::before, &::after {
+                        transition-delay: 0.05s * $i;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Media Queries pentru redimensionare
+
+// Ecran Mediu (sub 1000px)
+@media (max-width: 1000px) and (min-width: 701px) {
+    ul.meniu {
+        > li {
+            font-size: 0.85em; // text mai mic
+            
+            .text-icon {
+                display: none; // opțiunile principale text ascuns
+            }
+        }
+    }
+}
+
+// Ecran Mic (sub 700px)
+@media (max-width: 700px) {
+    nav {
+        background-color: var(--culoare-3); // culoare maro inchis
+        width: 100%;
+        display: block;
+        position: relative;
+    }
+    
+    #hamburger {
+        display: block;
+        cursor: pointer;
+        padding: 5px 10px;
+        background: transparent;
+        
+        #hamburger-container {
+            position: relative;
+            width: 30px;
+            height: 24px;
+            
+            .hamburger-bar {
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                background-color: var(--culoare-1);
+                border-radius: 2px;
+                left: 0;
+                opacity: 0;
+                animation: hamburger-appear 1s forwards;
+            }
+            
+            .hamburger-bar:nth-child(1) { top: 0; }
+            .hamburger-bar:nth-child(2) { top: 10px; }
+            .hamburger-bar:nth-child(3) { top: 20px; }
+            
+            @for $i from 1 through 3 {
+                .hamburger-bar:nth-child(#{$i}) {
+                    animation-delay: #{$i * 0.3}s;
+                }
+            }
+        }
+    }
+    
+    ul.meniu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+        
+        // Scalare pe orizontală a întregului meniu de mobil la apăsarea burger-ului
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: transform 0.5s ease-in-out;
+        
+        > li {
+            width: 100%;
+            height: auto; // Permite extinderea pe verticală când submeniul se deschide
+            min-height: var(--inaltime-buton);
+            
+            // Submeniul imbricat pe orizontală
+            ul {
+                position: relative;
+                top: 0;
+                transform-origin: left;
+                transform: scaleX(0);
+                max-height: 0; // Ascunde elementul din layout inițial
+                overflow: hidden; // Previne ca submeniul să iasă din zona de max-height
+                transition: transform 0.5s ease-in-out, max-height 0.5s ease-in-out;
+            }
+            
+            &:hover > ul {
+                transform: scaleX(1);
+                max-height: 600px; // O valoare suficient de mare pentru a arăta toate elementele
+            }
+        }
+        
+        // Pentru prima optiune (Acasă), ascundem textul și lăsăm doar iconul casuta
+        li:first-child {
+            .text-icon {
+                display: none;
+            }
+            .imag-icon {
+                display: inline-block;
+            }
+        }
+    }
+    
+    #ch-menu:checked + ul.meniu {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes hamburger-appear {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px) rotate(-90deg) scale(0.5);
+        background-color: var(--culoare-1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(10px) rotate(45deg) scale(1.2);
+        background-color: var(--culoare-2);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0) scale(1);
+        background-color: var(--culoare-1);
+    }
+}
