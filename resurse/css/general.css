@@ -307,6 +307,9 @@ figure>img{
         transform: none !important;
         margin: 0 !important;
         padding-left: 20px !important;
+        max-height: none !important;
+        overflow: visible !important;
+        opacity: 1 !important;
     }
 
     ul.meniu li, ul.meniu ul li {
@@ -317,6 +320,11 @@ figure>img{
         color: black !important;
         text-align: left !important;
         margin: 5px 0 !important;
+        max-height: none !important;
+    }
+
+    ul.meniu li::before, ul.meniu li::after, #hamburger, #ch-menu {
+        display: none !important;
     }
 
     nav {
@@ -330,10 +338,7 @@ figure>img{
         break-before: page;
     }
 }
-/* BONUS Task Video */
-video.video-prezentare{width:80%;min-width:300px;max-width:800px;display:block;margin:0 auto;}
-::cue{background-color:var(--culoare-3);color:white;text-align:left;}
-::cue(b){font-weight:bold;}
+
 
 /* BONUS Task Linkuri */
 /* Visited links */
